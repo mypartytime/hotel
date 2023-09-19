@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\Backend\TeamController;
 use App\Http\Controllers\Backend\RoomTypeController;
 use App\Http\Controllers\Backend\RoomController;
+use App\Http\Controllers\Frontend\FrontendRoomController;
 
  
 
@@ -99,3 +100,11 @@ Route::controller(RoomController::class)->group(function(){
 
 
 }); // End Admin Group Middleware 
+
+/// Room All Route 
+Route::controller(FrontendRoomController::class)->group(function(){
+
+    Route::get('/rooms/', 'AllFrontendRoomList')->name('froom.all');
+
+
+});
