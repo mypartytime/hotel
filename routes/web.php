@@ -126,8 +126,9 @@ Route::controller(BookingController::class)->group(function(){
 Route::controller(RoomListController::class)->group(function(){
 
     Route::get('/view/room/list', 'ViewRoomList')->name('view.room.list'); 
-
-
+    Route::get('/add/room/list', 'AddRoomList')->name('add.room.list'); 
+    Route::post('/store/roomlist', 'StoreRoomList')->name('store.roomlist');
+    
 });
 
 // Auth Middleware User must have login for access this route 
