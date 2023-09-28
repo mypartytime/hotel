@@ -209,3 +209,11 @@ Route::controller(BookingController::class)->group(function(){
 });
 
 }); // End Group Auth Middleware
+
+/// Frontend Blog  All Route 
+Route::controller(BlogController::class)->group(function(){
+
+    Route::get('/blog/details/{slug}', 'BlogDetails');
+
+
+});
