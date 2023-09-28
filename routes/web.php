@@ -214,6 +214,8 @@ Route::controller(BookingController::class)->group(function(){
 Route::controller(BlogController::class)->group(function(){
 
     Route::get('/blog/details/{slug}', 'BlogDetails');
+    Route::get('/blog/cat/list/{id}', 'BlogCatList');
+    Route::get('/blog', 'BlogList')->name('blog.list');
 
 
 });
