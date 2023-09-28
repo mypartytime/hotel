@@ -23,9 +23,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
-
+                    
                     @foreach ($blog as $item ) 
-
+                   
                     <div class="col-lg-12">
                         <div class="blog-card">
                             <div class="row align-items-center">
@@ -53,21 +53,13 @@
                         </div>
                     </div>
                     @endforeach
-
+                
 
                     <div class="col-lg-12 col-md-12">
                         <div class="pagination-area">
-                            <a href="#" class="prev page-numbers">
-                                <i class='bx bx-chevrons-left'></i>
-                            </a>
 
-                            <span class="page-numbers current" aria-current="page">1</span>
-                            <a href="#" class="page-numbers">2</a>
-                            <a href="#" class="page-numbers">3</a>
+                        {{ $blog->links('vendor.pagination.custom') }}
 
-                            <a href="#" class="next page-numbers">
-                                <i class='bx bx-chevrons-right'></i>
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -122,11 +114,11 @@
                             </article>
                             @endforeach
 
-
+                                
                             </div>
                         </div>
 
-
+                     
                     </div>
                 </div>
             </div>
