@@ -207,6 +207,12 @@ Route::controller(BookingController::class)->group(function(){
    Route::get('/user/booking', 'UserBooking')->name('user.booking');
    Route::get('/user/invoice/{id}', 'UserInvoice')->name('user.invoice');
 
+   /// Frontend Comment All Route 
+    Route::controller(CommentController::class)->group(function(){ 
+        Route::get('/all/comment/', 'AllComment')->name('all.comment'); 
+        Route::post('/update/comment/status', 'UpdateCommentStatus')->name('update.comment.status');
+    });
+
 });
 
 }); // End Group Auth Middleware
