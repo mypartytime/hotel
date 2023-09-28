@@ -243,6 +243,9 @@ Route::controller(BookingController::class)->group(function(){
 
         Route::post('/delete/gallery/multiple', 'DeleteGalleryMultiple')->name('delete.gallery.multiple');
 
+        // contact message admin view
+        Route::get('/contact/message', 'AdminContactMessage')->name('contact.message');
+
 
     });
 
@@ -273,6 +276,10 @@ Route::controller(CommentController::class)->group(function(){
 Route::controller(GalleryController::class)->group(function(){
 
     Route::get('/gallery', 'ShowGallery')->name('show.gallery');
+
+    // Contact All Route 
+    Route::get('/contact', 'ContactUs')->name('contact.us');
+    Route::post('/store/contact', 'StoreContactUs')->name('store.contact');
 
 
 });
