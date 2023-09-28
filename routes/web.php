@@ -15,6 +15,7 @@ use App\Http\Controllers\Backend\TestimonialController;
 use App\Http\Controllers\Backend\BlogController;
 use App\Http\Controllers\Backend\CommentController;
 use App\Http\Controllers\Backend\ReportController;
+use App\Http\Controllers\Backend\GalleryController;
 
  
 
@@ -228,6 +229,23 @@ Route::controller(BookingController::class)->group(function(){
         Route::post('/site/update', 'SiteUpdate')->name('site.update');
 
     });
+
+    /// Gallery All Route 
+    Route::controller(GalleryController::class)->group(function(){
+
+        Route::get('/all/gallery', 'AllGallery')->name('all.gallery'); 
+        Route::get('/add/gallery', 'AddGallery')->name('add.gallery');
+        Route::post('/store/gallery', 'StoreGallery')->name('store.gallery'); 
+
+        Route::get('/edit/gallery/{id}', 'EditGallery')->name('edit.gallery');
+        Route::post('/update/gallery', 'UpdateGallery')->name('update.gallery');
+        Route::get('/delete/gallery/{id}', 'DeleteGallery')->name('delete.gallery');
+
+        Route::post('/delete/gallery/multiple', 'DeleteGalleryMultiple')->name('delete.gallery.multiple');
+
+
+    });
+
 
 });
 
