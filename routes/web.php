@@ -14,6 +14,7 @@ use App\Http\Controllers\Backend\SettingController;
 use App\Http\Controllers\Backend\TestimonialController;
 use App\Http\Controllers\Backend\BlogController;
 use App\Http\Controllers\Backend\CommentController;
+use App\Http\Controllers\Backend\ReportController;
 
  
 
@@ -211,6 +212,13 @@ Route::controller(BookingController::class)->group(function(){
     Route::controller(CommentController::class)->group(function(){ 
         Route::get('/all/comment/', 'AllComment')->name('all.comment'); 
         Route::post('/update/comment/status', 'UpdateCommentStatus')->name('update.comment.status');
+    });
+
+    /// Booking Report All Route 
+    Route::controller(ReportController::class)->group(function(){ 
+        Route::get('/booking/report/', 'BookingReport')->name('booking.report');
+        Route::post('/search-by-date', 'SearchByDate')->name('search-by-date');
+
     });
 
 });
