@@ -49,7 +49,7 @@
             <option value="Booking">Booking</option>
             <option value="RoomList">RoomList</option>
             <option value="Setting">Setting</option>
-            <option value="Tesimonial">Tesimonial</option>
+            <option value="Testimonial">Testimonial</option>
             <option value="Blog">Blog</option>
             <option value="Manage Comment">Manage Comment</option>
             <option value="Booking Report">Booking Report </option>

@@ -49,7 +49,7 @@
             <option value="Booking" {{ $permission->group_name == 'Booking' ? 'selected' : '' }}>Booking</option>
             <option value="RoomList" {{ $permission->group_name == 'RoomList' ? 'selected' : '' }}>RoomList</option>
             <option value="Setting" {{ $permission->group_name == 'Setting' ? 'selected' : '' }}>Setting</option>
-            <option value="Tesimonial" {{ $permission->group_name == 'Tesimonial' ? 'selected' : '' }}>Tesimonial</option>
+            <option value="Testimonial" {{ $permission->group_name == 'Testimonial' ? 'selected' : '' }}>Testimonial</option>
             <option value="Blog" {{ $permission->group_name == 'Blog' ? 'selected' : '' }}>Blog</option>
             <option value="Manage Comment" {{ $permission->group_name == 'Manage Comment' ? 'selected' : '' }}>Manage Comment</option>
             <option value="Booking Report" {{ $permission->group_name == 'Booking Report' ? 'selected' : '' }}>Booking Report </option>
